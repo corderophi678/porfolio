@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>corderophilosophy.com</title>
+    <link rel="stylesheet" href="/assets/css/superstylin.css"/>
+    <link rel="stylesheet" href="/assets/css/dark.css"/>
+    <link rel="stylesheet" href="/assets/css/base.css"/>
+    {% if pageType == "page" %}
+      <link rel="stylesheet" href="/assets/css/page.css"/>
+    {% endif %}
+    {% if pageType == "post" %}
+      <link rel="stylesheet" href="/assets/css/post.css"/>
+    {% endif %}
+  </head>
+  <body>
+    {{ content | safe }}
+  </body>
+</html>
