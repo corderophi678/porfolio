@@ -8,6 +8,15 @@
     <link rel="stylesheet" href="/assets/css/superstylin.css"/>
     <link rel="stylesheet" href="/assets/css/base.css"/>
     <link rel="stylesheet" href="/assets/css/dark.css"/>
+    {% if pageType == 'post' %}
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:creator" content="@corderophi678">
+      <meta name="twitter:url" content="{{ metadata.siteUrl + page.url }}">
+      <meta name="twitter:title" content="{{ title }}">
+      <meta name="twitter:description" content="{{ description }}">
+      <meta name="twitter:image"
+      content="https://corderophilosophy.com/assets/img/logo.svg">
+    {% endif %}
   </head>
   <body>
     {% include "components/site-header.njk" %}
