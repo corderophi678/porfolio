@@ -3,6 +3,20 @@
 *:after {
   box-sizing: border-box;
 }
+:root {
+  --theme-dark-background: #272727;
+  --theme-dark-text: white;
+  --theme-dark-accent: darkred;
+  --theme-dark-logo-bg: white;
+  --theme-dark-logo-fill: #272727;
+  --theme-dark-subtle-text: #ddd;
+  --theme-light-background: white;
+  --theme-light-text: #272727;
+  --theme-light-accent: darkred;
+  --theme-light-logo-bg: #272727;
+  --theme-light-logo-fill: white;
+  --theme-light-subtle-text: #555;
+}
 header {
   display: flex;
   flex-direction: column;
@@ -10,10 +24,11 @@ header {
 header > a:first-child {
   margin-left: 0.5rem;
 }
-header > a > svg {
+.logo {
   width: 2rem;
   height: 2rem;
-  background: white;
+  background: var(--theme-light-logo-bg);
+  fill: var(--theme-light-logo-fill);
   border-radius: 100%;
 }
 nav ul {
@@ -37,7 +52,7 @@ nav a {
   height: 0;
   width: 100%;
   z-index: -1;
-  background: darkred;
+  background: var(--theme-light-accent);
   bottom: 0;
   left: 0;
   transition: height 250ms linear;
@@ -46,7 +61,6 @@ nav a {
 a:hover + .link-decorator {
   height: 100%;
   transition: height 250ms linear;
-  border: 1px solid white;
 }
 p {
   max-width: 66ch;
@@ -56,4 +70,26 @@ footer {
 }
 footer p {
   margin-bottom: 0;
+}
+.disclaimer {
+  font-style: italic;
+  font-weight: 300;
+  font-size: 0.75rem;
+  color: var(--theme-light-subtle-text);
+}
+blockquote {
+  border-left: 0.25rem solid var(--theme-light-accent);
+}
+blockquote p {
+  font-style: italic;
+}
+blockquote p:before {
+  content: "\""
+}
+blockquote p:after {
+  content: "\""
+}
+blockquote footer {
+  max-width: 60ch;
+  margin-top: 0;
 }

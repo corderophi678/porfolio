@@ -23,9 +23,9 @@
 
 @media (prefers-color-scheme: dark) {
   body {
-    color: white;
-    background-color: #272727;
-    caret-color: white;
+    color: var(--theme-dark-text);
+    background-color: var(--theme-dark-background);
+    caret-color: var(--theme-dark-text);
   }
 }
 
@@ -34,11 +34,15 @@
 
 @media (hover: hover) and (prefers-color-scheme: dark) {
   a:hover {
-    text-decoration-color: white;
+    text-decoration-color: var(--theme-dark-text);
   }
 }
 
 @media (prefers-color-scheme: dark) {
+  .logo {
+    fill: var(--theme-dark-logo-fill);
+    background: var(--theme-dark-logo-bg);
+  }
   a {
     text-decoration-color: #777677;
     -webkit-text-decoration-color: #777677;
@@ -112,6 +116,9 @@
 ––––––––––––––––––––––––––––––––– */
 
   blockquote {
-    border-left: 0.25rem solid #595859;
+    border-left: 0.25rem solid var(--theme-dark-accent);
+  }
+  .disclaimer {
+    color: var(--theme-dark-subtle-text);
   }
 }
