@@ -16,6 +16,9 @@
     {% endif %}
   </head>
   <body>
-    {{ content | safe }}
+    {% include "components/site-header.njk" %}
+    {% block content %}
+    {% endblock %}
+    {% include "components/site-footer.njk" %}
   </body>
 </html>

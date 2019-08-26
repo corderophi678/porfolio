@@ -1,11 +1,21 @@
----
-layout: base
----
+{% extends 'layouts/base.njk' %}
 
-<h1>Welcome!</h1>
+{% block content %}
+<h1>Howdy!</h1>
+<p>I'm (Dr.) Rich Cordero. I am a Person <span role="image">♿️</span>,
+  Philosopher <span role="image">🧠</span>, Consultant <span role="image">💼</span>, and
+  Developer <span role="image">👨‍💻</span>, (probably) in that
+  order.</p>
+<p>I like to write <code>code</code> that does useful things.</p>
+<p>Accessibility, on- and off-line, is my jam, but, like most folks, I'm still learning.</p>
+<p>You can find me on <a
+    href="https://twitter.com/corderophi678" target="_blank">Twitter</a>, but I wouldn't recommend it!</p>
 
-{% set postslist = collections.posts %}
-{% for post in postslist %}
+<section aria-labelledby="recent">
+  <h2 id="recent">Recent Posts</h2>
+  <ul>
+  {% set postslist = collections.posts %}
+  {% for post in postslist %}
   <li>
     <a href="{{ post.url | url }}">
       {% if post.data.title %}
@@ -17,4 +27,7 @@ layout: base
       {% endif %}
     </a>
   </li>
-{% endfor %}
+  {% endfor %}
+  </ul>
+</section>
+{% endblock %}

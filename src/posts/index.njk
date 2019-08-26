@@ -1,0 +1,25 @@
+{% block content %}
+  <p>Sometimes I think I have things to say. Then I start to say them, and
+    things go this way or that, and I end up not finishing those thoughts.
+    Sometimes I end up in a very different place than I thought I might
+    have. Here are some of those thoughts.</p>
+<section aria-labelledby="recent">
+  <h2 id="recent">Recent Posts</h2>
+  <ul>
+  {% set postslist = collections.posts %}
+  {% for post in postslist %}
+  <li>
+    <a href="{{ post.url | url }}">
+      {% if post.data.title %}
+        {{ post.data.title }}
+      {% else %}
+      <code>
+        {{ post.url }}
+      </code>
+      {% endif %}
+    </a>
+  </li>
+  {% endfor %}
+  </ul>
+</section>
+{% endblock %}
