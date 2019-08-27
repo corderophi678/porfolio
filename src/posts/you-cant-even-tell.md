@@ -1,5 +1,6 @@
 ---
 date: 2019-08-26
+description: I know he meant well, but Chatty Charlie is a bit of an asshole.
 tags:
   - post
 title: Huh...You can't even tell...

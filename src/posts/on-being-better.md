@@ -1,6 +1,6 @@
 ---
 date: 2019-08-25
-description: A big potato
+description: Short reflection on being a better person and what that means
 tags:
   - post
 title: On Being Better

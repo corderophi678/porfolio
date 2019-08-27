@@ -1,5 +1,6 @@
 ---
 date: 2018-07-17
+description: In an unjust world, what duty do we have to act justly?
 tags:
   - post
 title: Short Thoughts on 'Justice'
