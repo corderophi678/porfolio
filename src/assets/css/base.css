@@ -84,12 +84,17 @@ blockquote p {
   font-style: italic;
 }
 blockquote p:before {
-  content: "\""
+  content: '"';
 }
 blockquote p:after {
-  content: "\""
+  content: '"';
 }
 blockquote footer {
   max-width: 60ch;
   margin-top: 0;
+}
+@media screen and (prefers-reduced-motion: reduce) {
+  .link-decorator {
+    display: none;
+  }
 }
